@@ -13,6 +13,7 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
+
 :root {
   font-size: 18px;
 }
@@ -27,10 +28,24 @@
   background-size: cover;
   background-attachment: fixed;
   background-color: var(--bg-color);
-  background-image: 
-  repeating-linear-gradient(90deg, var(--color-line-repeat-gradient), var(--color-line-repeat-gradient) 2px, rgb(0, 0, 0, 0) 2px, rgb(0, 0, 0, 0) 4px),
-  repeating-linear-gradient(180deg, var(--color-line-repeat-gradient), var(--color-line-repeat-gradient) 2px, rgb(0, 0, 0, 0) 2px, rgb(0, 0, 0, 0) 4px),
-  linear-gradient(var(--color-line-gradient-start), var(--color-line-gradient-end));
+  background-image: repeating-linear-gradient(
+      90deg,
+      var(--color-line-repeat-gradient),
+      var(--color-line-repeat-gradient) 2px,
+      rgb(0 0 0 / 0) 2px,
+      rgb(0 0 0 / 0) 4px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      var(--color-line-repeat-gradient),
+      var(--color-line-repeat-gradient) 2px,
+      rgb(0 0 0 / 0) 2px,
+      rgb(0 0 0 / 0) 4px
+    ),
+    linear-gradient(
+      var(--color-line-gradient-start),
+      var(--color-line-gradient-end)
+    );
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,14 +57,16 @@
   width: clamp(20.833rem, 14.476rem + 30.516vw, 38.889rem);
   background-color: var(--bg-color);
   border: 1px solid var(--accent-color);
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition:
+    color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
 }
 
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: clamp(120px, 120px + (16 * ((100vw - 375px) / 1065)), 136px) 0 25px 0;
+  padding: clamp(120px, 120px + (16 * ((100vw - 375px) / 1065)), 136px) 0 25px;
   font-family: var(--accent-font-family);
   margin-bottom: 100px;
 }
@@ -79,7 +96,6 @@
   position: relative;
 }
 
-
 .theme-menu__item .theme-menu__button {
   background: transparent;
   border: none;
@@ -88,7 +104,7 @@
 }
 
 .theme-menu__item .theme-menu__button:disabled::before {
-  content: "▶";
+  content: '▶';
   color: var(--accent-color);
   position: absolute;
   left: -15px;
@@ -110,10 +126,10 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%; 
-  height: 2px; 
-  background-color: var(--accent-color); 
-  transform: scaleX(0); 
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-color);
+  transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
 }
@@ -162,18 +178,20 @@
 }
 
 @supports (-webkit-text-stroke: 0.5px var(--bg-color)) {
+
   .card-image__label {
-    -webkit-text-stroke: 0.5px var(--bg-color); 
+    -webkit-text-stroke: 0.5px var(--bg-color);
   }
 }
 
 @supports not (-webkit-text-stroke: 0.5px var(--bg-color)) {
+
   .card-image__label {
-      text-shadow: 
-          1px 1px 0 var(--bg-color), 
-          -1px 1px 0 var(--bg-color), 
-          1px -1px 0 var(--bg-color), 
-          -1px -1px 0 var(--bg-color);
+    text-shadow:
+      1px 1px 0 var(--bg-color),
+      -1px 1px 0 var(--bg-color),
+      1px -1px 0 var(--bg-color),
+      -1px -1px 0 var(--bg-color);
   }
 }
 
@@ -218,7 +236,7 @@
 
 .card__like-button:focus-visible,
 .footer-button:focus-visible {
-  box-shadow: 2px 2px 0px 1px var(--accent-color);
+  box-shadow: 2px 2px 0 1px var(--accent-color);
 }
 
 .card__like-button::after,
@@ -227,10 +245,10 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%; 
-  height: 100%; 
-  background-color: var(--accent-color); 
-  transform: scaleX(0); 
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s ease-in-out;
 }
@@ -241,6 +259,7 @@
 }
 
 /* Стиль для смешивания текста с фоном */
+
 .button__text {
   position: relative;
   z-index: 1;
@@ -260,7 +279,7 @@
 
 .like-icon:hover .main-body,
 .like-icon:hover .core {
-  fill:var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .like-icon:hover .core {
@@ -273,7 +292,7 @@
 
 .like-icon:active .main-body,
 .like-icon:active .core {
-  fill:var(--fill-like);
+  fill: var(--fill-like);
 }
 
 .like-icon:active .core {
@@ -286,12 +305,12 @@
 
 .like-icon.is-liked .contour {
   transition: fill 0.3s 0.06s ease;
+  fill: var(--fill-like);
 }
 
-.like-icon.is-liked .contour,
 .like-icon.is-liked .main-body,
 .like-icon.is-liked .core {
-  fill:var(--fill-like);
+  fill: var(--fill-like);
 }
 
 .like-icon.is-liked .contour,
@@ -325,10 +344,11 @@
 }
 
 @media (width <= 375px) {
+
   .card-conteiner {
     width: 100%;
   }
-  
+
   .card-image__label {
     top: 27px;
     right: 10px;
@@ -344,7 +364,7 @@
   display: grid;
   grid-template-columns: 20% 80%;
   grid-template-rows: auto auto;
-  row-gap: 16px; 
+  row-gap: 16px;
   position: fixed;
   inset: 0;
   width: clamp(341px, 18.631rem + 1.502vw, 357px);
@@ -372,42 +392,42 @@
   border: 2px solid var(--accent-color);
   width: 100%;
   text-transform: uppercase;
-  grid-column: 1 / -1; 
+  grid-column: 1 / -1;
 }
 
 .footer-dialog:not([open]) {
   pointer-events: none;
   opacity: 0;
-} 
+}
 
 .footer-dialog::backdrop {
   background-color: rgb(0 0 0 / 0.7);
-} 
+}
 
 .post-2 {
-  filter:contrast(2);
+  filter: contrast(2);
 }
+
 .post-3 {
   filter: brightness(1.7);
 }
+
 .post-4 {
   filter: hue-rotate(250deg);
 }
+
 .post-5 {
-  filter: blur(5px)
+  filter: blur(5px);
 }
+
 .post-6 {
   filter: grayscale(1);
 }
+
 .post-7 {
   filter: saturate(5);
 }
+
 .post-8 {
   filter: drop-shadow(0 0 40px) contrast(2);
 }
-
-
-
-
-
-
