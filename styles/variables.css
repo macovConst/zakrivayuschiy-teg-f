@@ -1,1 +1,16 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+ :root {
+  --font-family: Inter-Variable, sans-serif;
+  --accent-font-family: PressStart2P-Regular, sans-serif;
+  --font-weight-text: 465;
+  --font-weight-title: 785;
+  --bg-color: #000;
+  --accent-color: #00CC14;
+  --color-line-gradient-start: #007f0c;
+  --color-line-gradient-end: #004306;
+  --color-line-repeat-gradient: #000;
+  --color-button-text: var(--accent-color);
+  --fill-like: #ff0000;
+  --fill-contour-like: var(--accent-color);
+ }
+ 
