@@ -45,17 +45,12 @@
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-/* Начало Header */
-
-.header {  
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: clamp(120px, 120px + (16 * ((100vw - 375px) / 1065)), 136px) 0 25px 0;
   font-family: var(--accent-font-family);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-bottom: 100px;
 }
 
@@ -123,18 +118,14 @@
   transform-origin: left;
   transition: transform 0.3s ease;
 }
+
 .theme-menu__item .theme-menu__button:focus-visible::after {
   transform: scaleX(1);
 }
 
-/* Конец Header */
-/* Начало блока Content */
-
 .content {
   margin-bottom: 50px;
 }
-
-/* Стили карточки */
 
 .cards__list {
   display: flex;
@@ -145,7 +136,7 @@
 .card-title {
   font-size: 18px;
   font-variation-settings: 'wght' var(--font-weight-title);
-  padding: 3px 10px; 
+  padding: 3px 10px;
 }
 
 .card-image {
@@ -173,7 +164,7 @@
 
 @supports (-webkit-text-stroke: 0.5px var(--bg-color)) {
   .card-image__label {
-      -webkit-text-stroke: 0.5px var(--bg-color); 
+    -webkit-text-stroke: 0.5px var(--bg-color); 
   }
 }
 
@@ -226,16 +217,10 @@
   position: relative;
 }
 
-/* Конец стилей карточки */
-
-/* Тень при фокусе */
-
 .card__like-button:focus-visible,
 .footer-button:focus-visible {
   box-shadow: 2px 2px 0px 1px var(--accent-color);
 }
-
-/* Начало Эффект заполнения при наведении */
 
 .card__like-button::after,
 .footer-button::after {
@@ -265,10 +250,6 @@
   font-family: var(--accent-font-family);
   font-size: 14px;
 }
-
-/* Конец  Эффект заполнения при наведении*/
-
-/* Начало Стили для анимации Лайк */
 
 .like-icon .main-body {
   transition: fill 0.3s ease;
@@ -332,8 +313,6 @@
   animation-delay: 0.3s;
 }
 
-/* конец стилей описания Лайк */
-
 .footer .footer-button {
   display: flex;
   flex-direction: row;
@@ -362,8 +341,6 @@
   }
 }
 
-/* Стили диалога */
-
 .footer-dialog {
   font-size: 14px;
   display: grid;
@@ -391,7 +368,6 @@
   margin-top: 10px;
   width: 39px;
   height: 39px;
-
 }
 
 .footer-dialog .dialog__button {
@@ -410,7 +386,6 @@
   background-color: rgb(0 0 0 / 0.7);
 } 
 
-.post-1 {}
 .post-2 {
   filter:contrast(2);
 }
@@ -431,7 +406,6 @@
 }
 .post-8 {
   filter: drop-shadow(0 0 40px) contrast(2);
-
 }
 
 
