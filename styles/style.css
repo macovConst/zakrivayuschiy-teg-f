@@ -54,7 +54,7 @@
   margin-bottom: 100px;
 }
 
-.heading{
+.heading {
   font-size: clamp(2.722rem, 2.409rem + 1.502vw, 3.611rem);
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -96,8 +96,7 @@
 }
 
 .theme-menu__item .theme-menu__button:hover,
-.theme-menu__item .theme-menu__button:focus-visible
- {
+.theme-menu__item .theme-menu__button:focus-visible {
   opacity: 0.6;
 }
 
@@ -297,10 +296,9 @@
 
 .like-icon.is-liked .contour,
 .like-icon.is-liked .main-body,
-.like-icon.is-liked .core { 
+.like-icon.is-liked .core {
   transform: scale(1);
-  animation: scaleLike 0.3s ease-in;
-  animation-delay: 0.1s;
+  animation: scaleLike 0.3s ease-in 0.1s;
   transform-origin: center;
 }
 
@@ -363,7 +361,7 @@
   line-height: 150%;
 }
 
-.footer-dialog svg{
+.footer-dialog svg {
   display: block;
   margin-top: 10px;
   width: 39px;
