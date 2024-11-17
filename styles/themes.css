@@ -12,6 +12,8 @@
   --color-line-gradient-start: #007f0c;
   --color-line-gradient-end: #004306;
   --color-button-text: var(--accent-color);
+  --font-weight-text: 465;
+  --font-weight-title: 785;
 }
 
 :root.theme-light {
@@ -21,6 +23,8 @@
   --color-line-gradient-start: #e7e7e7;
   --color-line-gradient-end: #1a1a1a;
   --color-button-text: var(--bg-color);
+  --font-weight-text: 400;
+  --font-weight-title: 700;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,6 +36,8 @@
     --color-line-gradient-start: #007f0c;
     --color-line-gradient-end: #004306;
     --color-button-text: var(--accent-color);
+    --font-weight-text: 465;
+    --font-weight-title: 785;
   }
 }
 
@@ -44,5 +50,7 @@
     --color-line-gradient-start: #e7e7e7;
     --color-line-gradient-end: #1a1a1a;
     --color-button-text: var(--bg-color);
+    --font-weight-text: 400;
+    --font-weight-title: 700;
   }
 }

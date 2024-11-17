@@ -140,6 +140,10 @@
 
 .content {
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
 }
 
 .cards__list {
@@ -217,8 +221,8 @@
 }
 
 .card-footer .card__icon-button svg {
-  height: 100%;
-  width: 100%;
+  width: 39px;
+  height: 36px;
   display: block;
 }
 
@@ -240,7 +244,8 @@
 }
 
 .card__like-button::after,
-.footer-button::after {
+.footer-button::after,
+.dialog__button::after {
   content: '';
   position: absolute;
   left: 0;
@@ -254,11 +259,10 @@
 }
 
 .card__like-button:hover::after,
-.footer-button:hover::after {
+.footer-button:hover::after,
+.dialog__button:hover::after {
   transform: scaleX(1);
 }
-
-/* Стиль для смешивания текста с фоном */
 
 .button__text {
   position: relative;
@@ -330,7 +334,7 @@
   animation-delay: 0.3s;
 }
 
-.footer .footer-button {
+.footer-button {
   display: flex;
   flex-direction: row;
   gap: 8px;
@@ -354,7 +358,7 @@
     right: 10px;
   }
 
-  .footer .footer-button {
+  .footer-button {
     flex-direction: column;
   }
 }
@@ -375,6 +379,10 @@
   text-transform: uppercase;
 }
 
+.dialog__button {
+  position: relative;
+}
+
 .footer-dialog .dialog__text {
   font-family: var(--accent-font-family);
   line-height: 150%;
@@ -383,8 +391,8 @@
 .footer-dialog svg {
   display: block;
   margin-top: 10px;
-  width: 39px;
-  height: 39px;
+  width: 21px;
+  height: 21px;
 }
 
 .footer-dialog .dialog__button {
@@ -396,7 +404,7 @@
 
 .footer-dialog:not([open]) {
   pointer-events: none;
-  opacity: 0;
+  display: none;
 }
 
 .footer-dialog::backdrop {

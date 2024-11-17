@@ -618,8 +618,6 @@
               <button class="card__icon-button" aria-label="Поставить лайк">
                 <svg
                   class="like-icon"
-                  width="39"
-                  height="36"
                   viewBox="0 0 39 36"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -658,9 +656,7 @@
           </article>
         </li>
       </ul>
-    </main>
 
-    <footer class="footer">
       <button
         class="footer-button"
         aria-label="Сохрани на память"
@@ -678,25 +674,24 @@
         </svg>
         <span class="button__text"> Сохранить на память</span>
       </button>
-
-      <dialog
-        class="footer-dialog"
-        id="save-memory"
-        aria-label="Вставьте дискету"
+    </main>
+    <dialog
+      class="footer-dialog"
+      id="save-memory"
+      aria-label="Вставьте дискету"
+    >
+      <svg viewBox="0 0 21 21" width="21px" height="21px">
+        <use href="./svg/floppy.svg#floppy" />
+      </svg>
+      <span class="dialog__text">Вставьте дискету, чтобы продолжить</span>
+      <button
+        class="dialog__button"
+        type="button"
+        onclick="window['save-memory'].close()"
       >
-        <svg viewBox="0 0 21 21" width="21px" height="21px">
-          <use href="./svg/floppy.svg#floppy" />
-        </svg>
-        <span class="dialog__text">Вставьте дискету, чтобы продолжить</span>
-        <button
-          class="dialog__button"
-          type="button"
-          onclick="window['save-memory'].close()"
-        >
-          <span class="button__text">ok</span>
-        </button>
-      </dialog>
-    </footer>
+        <span class="button__text">ok</span>
+      </button>
+    </dialog>
 
     <script src="./scripts/like.js"></script>
   </body>
