@@ -139,7 +139,6 @@
 }
 
 .content {
-  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -238,14 +237,11 @@
   position: relative;
 }
 
-.card__like-button:focus-visible,
-.footer-button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 1px var(--accent-color);
 }
 
-.card__like-button::after,
-.footer-button::after,
-.dialog__button::after {
+.button::after {
   content: '';
   position: absolute;
   left: 0;
@@ -258,9 +254,7 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.card__like-button:hover::after,
-.footer-button:hover::after,
-.dialog__button:hover::after {
+.button:hover::after {
   transform: scaleX(1);
 }
 
@@ -274,11 +268,11 @@
 }
 
 .like-icon .main-body {
-  transition: fill 0.3s ease;
+  transition: fill 0.3s linear;
 }
 
 .like-icon .core {
-  transition: fill 0.3s 0.05s ease;
+  transition: fill 0.3s 0.03s linear;
 }
 
 .like-icon:hover .main-body,
@@ -372,7 +366,7 @@
   position: fixed;
   inset: 0;
   width: clamp(341px, 18.631rem + 1.502vw, 357px);
-  min-height: clamp(10.611rem, 10.572rem + 0.188vw, 10.722rem);
+  /* min-height: clamp(10.611rem, 10.572rem + 0.188vw, 10.722rem); */
   padding: 30px;
   background-color: var(--bg-color);
   color: var(--accent-color);
@@ -391,8 +385,8 @@
 .footer-dialog svg {
   display: block;
   margin-top: 10px;
-  width: 21px;
-  height: 21px;
+  width: 39px;
+  height: 39px;
 }
 
 .footer-dialog .dialog__button {
@@ -400,6 +394,7 @@
   width: 100%;
   text-transform: uppercase;
   grid-column: 1 / -1;
+  padding: 12px 0;
 }
 
 .footer-dialog:not([open]) {
@@ -408,33 +403,33 @@
 }
 
 .footer-dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.7);
+  background-color: rgb(0 0 0 / 0.5);
 }
 
-.post-2 {
+.filter-contrast {
   filter: contrast(2);
 }
 
-.post-3 {
+.filter-brightness {
   filter: brightness(1.7);
 }
 
-.post-4 {
+.filter-hue-rotate {
   filter: hue-rotate(250deg);
 }
 
-.post-5 {
+.filter-blur {
   filter: blur(5px);
 }
 
-.post-6 {
+.filter-grayscale {
   filter: grayscale(1);
 }
 
-.post-7 {
+.filter-saturate {
   filter: saturate(5);
 }
 
-.post-8 {
+.filter-drop-shadow-contrast {
   filter: drop-shadow(0 0 40px) contrast(2);
 }
