@@ -29,7 +29,7 @@
 
 @media (prefers-color-scheme: dark) {
 
-  .theme_auto {
+  .theme-auto {
     --bg-color: #000;
     --accent-color: #00cc14;
     --color-line-repeat-gradient: #000;
@@ -43,7 +43,7 @@
 
 @media (prefers-color-scheme: light) {
 
-  .theme_auto {
+  .theme-auto {
     --bg-color: #fff;
     --accent-color: #000;
     --color-line-repeat-gradient: #d3d3d3;
