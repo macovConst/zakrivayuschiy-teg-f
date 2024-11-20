@@ -182,14 +182,12 @@
 }
 
 @supports (-webkit-text-stroke: 0.5px var(--bg-color)) {
-
   .card-image__label {
     -webkit-text-stroke: 0.5px var(--bg-color);
   }
 }
 
 @supports not (-webkit-text-stroke: 0.5px var(--bg-color)) {
-
   .card-image__label {
     text-shadow:
       1px 1px 0 var(--bg-color),
@@ -347,7 +345,6 @@
 }
 
 @media (width <= 375px) {
-
   .card-conteiner {
     width: 100%;
   }
@@ -365,7 +362,6 @@
     width: 28px;
     height: 28px;
   }
-  
 }
 
 .footer-dialog {
